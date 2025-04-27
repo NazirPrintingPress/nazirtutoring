@@ -1,180 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn and excel with personalized private tutoring.">
-    <title>NazirTutoring | Gets the job done</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn and excel with personalized private tutoring.">
+  <title>NazirTutoring | Gets the job done</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Nazir Tutoring</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#subjects">Subjects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>Nazir Tutoring</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Unlock Your Potential with Personalized Tutoring</h2>
-            <p>One-on-one support </p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Unlock Your Potential with Personalized Tutoring</h2>
+      <p>One-on-one support</p>
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Nazir Tutoring</h2>
-        <p> Tutoring for many years started while at University and stayed with main tutoring websites like Mytutor. Now I am self-sufficient, the same great quality at a better rate.Graduated in Mechanical engineering so rest assured that I am confident.</p>
-        <p>First things first, I don't promise higher grades, I promise a better reward to effort ratio for pupils revision. That way they can put the effort needed to get the grades they want. If this feels right for you then contact me below for a free 15 minute consulation.</p>
-    </section>
-<!-- Availability Section -->
-<section id="availability" class="availability">
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Nazir Tutoring</h2>
+    <p>Tutoring for many years, started while at University and worked with major tutoring websites like MyTutor. Now I am self-sufficient, offering the same great quality at a better rate. Graduated in Mechanical Engineering, so rest assured I am confident.</p>
+    <p>I don't promise higher grades — I promise a better reward-to-effort ratio for students' revision. This way, they can achieve the grades they aim for. If this sounds right to you, contact me below for a free 15-minute consultation.</p>
+  </section>
+
+  <!-- Availability Section -->
+  <section id="availability" class="availability">
     <h2>Weekly Availability</h2>
     <div class="calendar-grid">
-        
-        <div class="day">
-            <h3>Monday</h3>
-        
-            <h4>Morning</h4>
-            <ul class="timeslots morning">
-                <li><button onclick="selectTime('Monday 9:00 AM – 10:00 AM')">9:00 AM – 10:00 AM</button></li>
-                <li><button onclick="selectTime('Monday 10:00 AM – 11:00 AM')">10:00 AM – 11:00 AM</button></li>
-            </ul>
-        
-            <h4>Afternoon</h4>
-            <ul class="timeslots afternoon">
-                <li><button onclick="selectTime('Monday 12:00 PM – 1:00 PM')">12:00 PM – 1:00 PM</button></li>
-                <li><button onclick="selectTime('Monday 2:00 PM – 3:00 PM')">2:00 PM – 3:00 PM</button></li>
-            </ul>
-        
-            <h4>Evening</h4>
-            <ul class="timeslots evening">
-                <li><button onclick="selectTime('Monday 5:00 PM – 6:00 PM')">5:00 PM – 6:00 PM</button></li>
-                <li><button onclick="selectTime('Monday 6:00 PM – 7:00 PM')">6:00 PM – 7:00 PM</button></li>
-            </ul>
-        </div>
+      <!-- Monday -->
+      <div class="day">
+        <h3>Monday</h3>
+        <h4>Morning</h4>
+        <ul class="timeslots morning">
+          <li><button onclick="selectTime(this)" data-timeslot="Monday 9:00 AM – 10:00 AM">9:00 AM – 10:00 AM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Monday 10:00 AM – 11:00 AM">10:00 AM – 11:00 AM</button></li>
+        </ul>
 
-        <div class="day">
-            <h3>Tuesday</h3>
-        
-            <h4>Morning</h4>
-            <ul class="timeslots morning">
-                <li><button onclick="selectTime('Tuesday 9:00 AM – 10:00 AM')">9:00 AM – 10:00 AM</button></li>
-                <li><button onclick="selectTime('Tuesday 10:00 AM – 11:00 AM')">10:00 AM – 11:00 AM</button></li>
-            </ul>
-        
-            <h4>Afternoon</h4>
-            <ul class="timeslots afternoon">
-                <li><button onclick="selectTime('Tuesday 12:00 PM – 1:00 PM')">12:00 PM – 1:00 PM</button></li>
-                <li><button onclick="selectTime('Tuesday 2:00 PM – 3:00 PM')">2:00 PM – 3:00 PM</button></li>
-            </ul>
-        
-            <h4>Evening</h4>
-            <ul class="timeslots evening">
-                <li><button onclick="selectTime('Tuesday 5:00 PM – 6:00 PM')">5:00 PM – 6:00 PM</button></li>
-                <li><button onclick="selectTime('Tuesday 6:00 PM – 7:00 PM')">6:00 PM – 7:00 PM</button></li>
-            </ul>
-        </div>
+        <h4>Afternoon</h4>
+        <ul class="timeslots afternoon">
+          <li><button onclick="selectTime(this)" data-timeslot="Monday 12:00 PM – 1:00 PM">12:00 PM – 1:00 PM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Monday 2:00 PM – 3:00 PM">2:00 PM – 3:00 PM</button></li>
+        </ul>
 
+        <h4>Evening</h4>
+        <ul class="timeslots evening">
+          <li><button onclick="selectTime(this)" data-timeslot="Monday 5:00 PM – 6:00 PM">5:00 PM – 6:00 PM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Monday 6:00 PM – 7:00 PM">6:00 PM – 7:00 PM</button></li>
+        </ul>
+      </div>
 
-        <div class="day">
-            <h3>Thursday</h3>
-        
-            <h4>Morning</h4>
-            <ul class="timeslots morning">
-                <li><button onclick="selectTime('Thursday 9:00 AM – 10:00 AM')">9:00 AM – 10:00 AM</button></li>
-                <li><button onclick="selectTime('Thursday 10:00 AM – 11:00 AM')">10:00 AM – 11:00 AM</button></li>
-            </ul>
-        
-            <h4>Afternoon</h4>
-            <ul class="timeslots afternoon">
-                <li><button onclick="selectTime('Thursday 12:00 PM – 1:00 PM')">12:00 PM – 1:00 PM</button></li>
-                <li><button onclick="selectTime('Thursday 2:00 PM – 3:00 PM')">2:00 PM – 3:00 PM</button></li>
-            </ul>
-        
-            <h4>Evening</h4>
-            <ul class="timeslots evening">
-                <li><button onclick="selectTime('Thursday 5:00 PM – 6:00 PM')">5:00 PM – 6:00 PM</button></li>
-                <li><button onclick="selectTime('Thursday 6:00 PM – 7:00 PM')">6:00 PM – 7:00 PM</button></li>
-            </ul>
-        </div>
+      <!-- Tuesday -->
+      <div class="day">
+        <h3>Tuesday</h3>
+        <h4>Morning</h4>
+        <ul class="timeslots morning">
+          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 9:00 AM – 10:00 AM">9:00 AM – 10:00 AM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 10:00 AM – 11:00 AM">10:00 AM – 11:00 AM</button></li>
+        </ul>
+
+        <h4>Afternoon</h4>
+        <ul class="timeslots afternoon">
+          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 12:00 PM – 1:00 PM">12:00 PM – 1:00 PM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 2:00 PM – 3:00 PM">2:00 PM – 3:00 PM</button></li>
+        </ul>
+
+        <h4>Evening</h4>
+        <ul class="timeslots evening">
+          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 5:00 PM – 6:00 PM">5:00 PM – 6:00 PM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 6:00 PM – 7:00 PM">6:00 PM – 7:00 PM</button></li>
+        </ul>
+      </div>
+
+      <!-- Thursday -->
+      <div class="day">
+        <h3>Thursday</h3>
+        <h4>Morning</h4>
+        <ul class="timeslots morning">
+          <li><button onclick="selectTime(this)" data-timeslot="Thursday 9:00 AM – 10:00 AM">9:00 AM – 10:00 AM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Thursday 10:00 AM – 11:00 AM">10:00 AM – 11:00 AM</button></li>
+        </ul>
+
+        <h4>Afternoon</h4>
+        <ul class="timeslots afternoon">
+          <li><button onclick="selectTime(this)" data-timeslot="Thursday 12:00 PM – 1:00 PM">12:00 PM – 1:00 PM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Thursday 2:00 PM – 3:00 PM">2:00 PM – 3:00 PM</button></li>
+        </ul>
+
+        <h4>Evening</h4>
+        <ul class="timeslots evening">
+          <li><button onclick="selectTime(this)" data-timeslot="Thursday 5:00 PM – 6:00 PM">5:00 PM – 6:00 PM</button></li>
+          <li><button onclick="selectTime(this)" data-timeslot="Thursday 6:00 PM – 7:00 PM">6:00 PM – 7:00 PM</button></li>
+        </ul>
+      </div>
     </div>
-</section>
-    <!-- Subjects Section -->
-    <section id="subjects" class="subjects">
-        <h2>Offerings</h2>
-        <div class="subject-cards">
-            <div class="subject-card">
-                <h3>Mathematics</h3>
-                <p>All levels upto and including A-level. Get intouch to book a free consultation.</p>
-                <p>Pricing is ranging around £49. Some flexiblity</p>
-            </div>
-            <div class="subject-card">
-                <h3>Sciences</h3>
-                <p>All levels upto and including A-level.(Biology upto and including GCSE).Get intouch to book a free consultation.</p>
-                <p>Pricing is ranging around £49. Some flexiblity</p>
-            </div>
-            <div class="subject-card">
-                <h3>Other</h3>
-                <p>I am able to offer other subjects or assistance such as engineering or CV writing.Get intouch to book a free consultation.</p>
-                <p>Pricing is ranging around £49. Some flexiblity</p>
-            </div>
-        </div>
-    </section>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>If you feel that I maybe right for you then get intouch to book a free consultation</p>
-        <form action="https://formspree.io/f/yourformid" method="POST">
-            <label for="email">
-                Your Email:
-                <input type="email" id="email" name="email" required>
-            </label>
-            <label for="message">
-                Your Message:
-                <textarea id="message" name="message" required></textarea>
-            </label>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+  <!-- Subjects Section -->
+  <section id="subjects" class="subjects">
+    <h2>Offerings</h2>
+    <div class="subject-cards">
+      <div class="subject-card">
+        <h3>Mathematics</h3>
+        <p>All levels up to and including A-level. Get in touch to book a free consultation.</p>
+        <p>Pricing around £49. Some flexibility.</p>
+      </div>
+      <div class="subject-card">
+        <h3>Sciences</h3>
+        <p>All levels up to and including A-level (Biology up to GCSE). Get in touch to book a free consultation.</p>
+        <p>Pricing around £49. Some flexibility.</p>
+      </div>
+      <div class="subject-card">
+        <h3>Other</h3>
+        <p>I can also assist in subjects like Engineering or CV writing. Get in touch to book a free consultation.</p>
+        <p>Pricing around £49. Some flexibility.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 NazirTutoring. All Rights Reserved.</p>
-    </footer>
-    <script>
-        function addSubjectToMessage(subject) {
-            const messageField = document.getElementById('message');
-            messageField.value = `Subject: ${subject}\n\nPlease provide more details about this service:`;
-        }
-    
-        function selectTime(timeSlot) {
-            const messageField = document.getElementById('message');
-            messageField.value = `Requested Time Slot: ${timeSlot}\n\nPlease describe your needs:`;
-    
-            // Remove "selected" class from all buttons first
-            const allButtons = document.querySelectorAll('.timeslots button');
-            allButtons.forEach(button => {
-                button.classList.remove('selected');
-            });
-    
-            // Add "selected" class to the clicked button
-            event.target.classList.add('selected');
-        }
-    </script>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>If you feel I might be right for you, get in touch for a free consultation.</p>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <label for="email">
+        Your Email:
+        <input type="email" id="email" name="email" required>
+      </label>
+      <label for="message">
+        Your Message:
+        <textarea id="message" name="message" required></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NazirTutoring. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function selectTime(button) {
+      const messageField = document.getElementById('message');
+
+      button.classList.toggle('selected');
+
+      const selectedButtons = document.querySelectorAll('.timeslots button.selected');
+      const selectedTimes = Array.from(selectedButtons).map(btn => btn.dataset.timeslot);
+
+      messageField.value = `Requested Time Slots:\n- ${selectedTimes.join('\n- ')}\n\nPlease describe your needs:`;
+    }
+  </script>
 </body>
-
 </html>
