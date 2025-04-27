@@ -46,53 +46,68 @@
         
         <div class="day">
             <h3>Monday</h3>
-            <ul class="timeslots">
-                <li>8:00 AM – 9:00 AM</li>
-                <li>9:00 AM – 10:00 AM</li>
-                <li>10:00 AM – 11:00 AM</li>
-                <li>11:00 AM – 12:00 PM</li>
-                <li>12:00 PM – 1:00 PM</li>
-                <li>1:00 PM – 2:00 PM</li>
-                <li>2:00 PM – 3:00 PM</li>
-                <li>3:00 PM – 4:00 PM</li>
-                <li>8:00 PM – 9:00 PM</li>
-
+        
+            <h4>Morning</h4>
+            <ul class="timeslots morning">
+                <li><button onclick="selectTime('Monday 9:00 AM – 10:00 AM')">9:00 AM – 10:00 AM</button></li>
+                <li><button onclick="selectTime('Monday 10:00 AM – 11:00 AM')">10:00 AM – 11:00 AM</button></li>
+            </ul>
+        
+            <h4>Afternoon</h4>
+            <ul class="timeslots afternoon">
+                <li><button onclick="selectTime('Monday 12:00 PM – 1:00 PM')">12:00 PM – 1:00 PM</button></li>
+                <li><button onclick="selectTime('Monday 2:00 PM – 3:00 PM')">2:00 PM – 3:00 PM</button></li>
+            </ul>
+        
+            <h4>Evening</h4>
+            <ul class="timeslots evening">
+                <li><button onclick="selectTime('Monday 5:00 PM – 6:00 PM')">5:00 PM – 6:00 PM</button></li>
+                <li><button onclick="selectTime('Monday 6:00 PM – 7:00 PM')">6:00 PM – 7:00 PM</button></li>
             </ul>
         </div>
 
         <div class="day">
             <h3>Tuesday</h3>
-            <ul class="timeslots">
-                <li>8:00 AM – 9:00 AM</li>
-                <li>9:00 AM – 10:00 AM</li>
-                <li>10:00 AM – 11:00 AM</li>
-                <li>11:00 AM – 12:00 PM</li>
-                <li>12:00 PM – 1:00 PM</li>
-                <li>1:00 PM – 2:00 PM</li>
-                <li>2:00 PM – 3:00 PM</li>
-                <li>3:00 PM – 4:00 PM</li>
-                <li>6:00 PM – 7:00 PM</li>
-                <li>8:00 PM – 9:00 PM</li>
-
+        
+            <h4>Morning</h4>
+            <ul class="timeslots morning">
+                <li><button onclick="selectTime('Tuesday 9:00 AM – 10:00 AM')">9:00 AM – 10:00 AM</button></li>
+                <li><button onclick="selectTime('Tuesday 10:00 AM – 11:00 AM')">10:00 AM – 11:00 AM</button></li>
+            </ul>
+        
+            <h4>Afternoon</h4>
+            <ul class="timeslots afternoon">
+                <li><button onclick="selectTime('Tuesday 12:00 PM – 1:00 PM')">12:00 PM – 1:00 PM</button></li>
+                <li><button onclick="selectTime('Tuesday 2:00 PM – 3:00 PM')">2:00 PM – 3:00 PM</button></li>
+            </ul>
+        
+            <h4>Evening</h4>
+            <ul class="timeslots evening">
+                <li><button onclick="selectTime('Tuesday 5:00 PM – 6:00 PM')">5:00 PM – 6:00 PM</button></li>
+                <li><button onclick="selectTime('Tuesday 6:00 PM – 7:00 PM')">6:00 PM – 7:00 PM</button></li>
             </ul>
         </div>
 
 
-
         <div class="day">
             <h3>Thursday</h3>
-            <ul class="timeslots">
-                <li>8:00 AM – 9:00 AM</li>
-                <li>9:00 AM – 10:00 AM</li>
-                <li>10:00 AM – 11:00 AM</li>
-                <li>11:00 AM – 12:00 PM</li>
-                <li>12:00 PM – 1:00 PM</li>
-                <li>1:00 PM – 2:00 PM</li>
-                <li>2:00 PM – 3:00 PM</li>
-                <li>3:00 PM – 4:00 PM</li>
-                <li>4:00 PM – 5:00 PM</li>
-                <li>6:00 PM – 7:00 PM</li>
-                <li>8:00 PM – 9:00 PM</li>
+        
+            <h4>Morning</h4>
+            <ul class="timeslots morning">
+                <li><button onclick="selectTime('Thursday 9:00 AM – 10:00 AM')">9:00 AM – 10:00 AM</button></li>
+                <li><button onclick="selectTime('Thursday 10:00 AM – 11:00 AM')">10:00 AM – 11:00 AM</button></li>
+            </ul>
+        
+            <h4>Afternoon</h4>
+            <ul class="timeslots afternoon">
+                <li><button onclick="selectTime('Thursday 12:00 PM – 1:00 PM')">12:00 PM – 1:00 PM</button></li>
+                <li><button onclick="selectTime('Thursday 2:00 PM – 3:00 PM')">2:00 PM – 3:00 PM</button></li>
+            </ul>
+        
+            <h4>Evening</h4>
+            <ul class="timeslots evening">
+                <li><button onclick="selectTime('Thursday 5:00 PM – 6:00 PM')">5:00 PM – 6:00 PM</button></li>
+                <li><button onclick="selectTime('Thursday 6:00 PM – 7:00 PM')">6:00 PM – 7:00 PM</button></li>
             </ul>
         </div>
     </div>
@@ -140,6 +155,26 @@
     <footer>
         <p>&copy; 2025 NazirTutoring. All Rights Reserved.</p>
     </footer>
+    <script>
+        function addSubjectToMessage(subject) {
+            const messageField = document.getElementById('message');
+            messageField.value = `Subject: ${subject}\n\nPlease provide more details about this service:`;
+        }
+    
+        function selectTime(timeSlot) {
+            const messageField = document.getElementById('message');
+            messageField.value = `Requested Time Slot: ${timeSlot}\n\nPlease describe your needs:`;
+    
+            // Remove "selected" class from all buttons first
+            const allButtons = document.querySelectorAll('.timeslots button');
+            allButtons.forEach(button => {
+                button.classList.remove('selected');
+            });
+    
+            // Add "selected" class to the clicked button
+            event.target.classList.add('selected');
+        }
+    </script>
 </body>
 
 </html>

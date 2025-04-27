@@ -215,3 +215,34 @@ footer {
     font-weight: bold;
     margin-top: 15px;
 }
+.timeslots {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeslots li {
+    margin: 0.5rem 0;
+}
+
+.timeslots button {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.timeslots button:hover {
+    background-color: #d0d0d0;
+}
+
+.day h4 {
+    margin-top: 1rem;
+    color: #333;
+}
+.timeslots button.selected {
+    background-color: #4CAF50; /* Nice green */
+    color: white;
+    font-weight: bold;
