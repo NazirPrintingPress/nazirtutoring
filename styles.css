@@ -131,12 +131,28 @@ form label {
 form input,
 form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px 15px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;  /* Make font size a bit bigger */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Readable font */
+    background-color: #f9f9f9;  /* Light background for easy readability */
+    transition: background-color 0.3s ease;
 }
 
+form textarea {
+    min-height: 150px;  /* Gives a taller box by default */
+}
+
+/* Focus style for better readability */
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background-color: #f1f1f1;  /* Slightly darker background on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);  /* Green glow on focus */
+}
 form button {
     margin-top: 15px;
     background: #4CAF50;
