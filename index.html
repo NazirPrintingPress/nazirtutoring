@@ -63,73 +63,71 @@
   <!-- Availability Section -->
   <section id="availability" class="availability">
     <h2>Weekly Availability</h2>
-    <div class="calendar-grid">
-      <!-- Monday -->
-      <div class="day">
-        <h3>Monday</h3>
-        <h4>Morning</h4>
-        <ul class="timeslots morning">
-          <li><button onclick="selectTime(this)" data-timeslot="Monday 9:00 AM – 10:00 AM">9:00 AM – 10:00 AM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Monday 10:00 AM – 11:00 AM">10:00 AM – 11:00 AM</button></li>
-        </ul>
+    <div class="calendar-grid" id="calenderGrid"></div>
+    <script>
+// Function to fetch and parse CSV
+async function fetchCSV() {
+            const response = await fetch('availability.csv');  // Path to your CSV file
+            const data = await response.text();
+            return data;
+        }
 
-        <h4>Afternoon</h4>
-        <ul class="timeslots afternoon">
-          <li><button onclick="selectTime(this)" data-timeslot="Monday 12:00 PM – 1:00 PM">12:00 PM – 1:00 PM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Monday 2:00 PM – 3:00 PM">2:00 PM – 3:00 PM</button></li>
-        </ul>
+        // Function to convert CSV data into an array of objects
+        function parseCSV(data) {
+            const rows = data.split('\n');
+            const headers = rows[0].split(',');
+            const availability = [];
 
-        <h4>Evening</h4>
-        <ul class="timeslots evening">
-          <li><button onclick="selectTime(this)" data-timeslot="Monday 5:00 PM – 6:00 PM">5:00 PM – 6:00 PM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Monday 6:00 PM – 7:00 PM">6:00 PM – 7:00 PM</button></li>
-        </ul>
-      </div>
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].split(',');
+                if (cells.length === headers.length) {
+                    const day = cells[0];
+                    const timeslots = cells.slice(1);
+                    availability.push({ day, timeslots });
+                }
+            }
 
-      <!-- Tuesday -->
-      <div class="day">
-        <h3>Tuesday</h3>
-        <h4>Morning</h4>
-        <ul class="timeslots morning">
-          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 9:00 AM – 10:00 AM">9:00 AM – 10:00 AM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 10:00 AM – 11:00 AM">10:00 AM – 11:00 AM</button></li>
-        </ul>
+            return availability;
+        }
 
-        <h4>Afternoon</h4>
-        <ul class="timeslots afternoon">
-          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 12:00 PM – 1:00 PM">12:00 PM – 1:00 PM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 2:00 PM – 3:00 PM">2:00 PM – 3:00 PM</button></li>
-        </ul>
+        // Function to display availability on the page
+        function displayAvailability(availability) {
+            const calendarGrid = document.getElementById('calendarGrid');
+            calendarGrid.innerHTML = '';
 
-        <h4>Evening</h4>
-        <ul class="timeslots evening">
-          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 5:00 PM – 6:00 PM">5:00 PM – 6:00 PM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Tuesday 6:00 PM – 7:00 PM">6:00 PM – 7:00 PM</button></li>
-        </ul>
-      </div>
+            availability.forEach(entry => {
+                const dayElement = document.createElement('div');
+                dayElement.classList.add('day');
+                const dayTitle = document.createElement('h3');
+                dayTitle.textContent = entry.day;
+                dayElement.appendChild(dayTitle);
 
-      <!-- Thursday -->
-      <div class="day">
-        <h3>Thursday</h3>
-        <h4>Morning</h4>
-        <ul class="timeslots morning">
-          <li><button onclick="selectTime(this)" data-timeslot="Thursday 9:00 AM – 10:00 AM">9:00 AM – 10:00 AM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Thursday 10:00 AM – 11:00 AM">10:00 AM – 11:00 AM</button></li>
-        </ul>
+                const timeslotsList = document.createElement('ul');
+                entry.timeslots.forEach(slot => {
+                    const slotElement = document.createElement('li');
+                    const button = document.createElement('button');
+                    button.textContent = slot;
+                    button.classList.add(slot.toLowerCase()); // Add class to style
 
-        <h4>Afternoon</h4>
-        <ul class="timeslots afternoon">
-          <li><button onclick="selectTime(this)" data-timeslot="Thursday 12:00 PM – 1:00 PM">12:00 PM – 1:00 PM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Thursday 2:00 PM – 3:00 PM">2:00 PM – 3:00 PM</button></li>
-        </ul>
+                    slotElement.appendChild(button);
+                    timeslotsList.appendChild(slotElement);
+                });
 
-        <h4>Evening</h4>
-        <ul class="timeslots evening">
-          <li><button onclick="selectTime(this)" data-timeslot="Thursday 5:00 PM – 6:00 PM">5:00 PM – 6:00 PM</button></li>
-          <li><button onclick="selectTime(this)" data-timeslot="Thursday 6:00 PM – 7:00 PM">6:00 PM – 7:00 PM</button></li>
-        </ul>
-      </div>
-    </div>
+                dayElement.appendChild(timeslotsList);
+                calendarGrid.appendChild(dayElement);
+            });
+        }
+
+        // Main function to load and display CSV data
+        async function loadAvailability() {
+            const csvData = await fetchCSV();
+            const availability = parseCSV(csvData);
+            displayAvailability(availability);
+        }
+
+        // Load availability when the page loads
+        window.onload = loadAvailability;
+    </script>        
   </section>
 
 
