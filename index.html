@@ -133,22 +133,38 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+<!-- Contact Section -->
+<section id="contact" class="contact">
     <h2>Contact Us</h2>
-    <p>If you feel I might be right for you, get in touch for a free consultation.</p>
+    <p>If you feel that I may be right for you, get in touch to book a free consultation</p>
     <form action="https://formspree.io/f/yourformid" method="POST">
-      <label for="email">
-        Your Email:
-        <input type="email" id="email" name="email" required>
-      </label>
-      <label for="message">
-        Your Message:
-        <textarea id="message" name="message" required></textarea>
-      </label>
-      <button type="submit">Send Message</button>
+        <!-- Parent Name -->
+        <label for="parent-name">
+            Parent Name:
+            <input type="text" id="parent-name" name="parent-name" required>
+        </label>
+
+        <!-- Child Name -->
+        <label for="child-name">
+            Child Name:
+            <input type="text" id="child-name" name="child-name" required>
+        </label>
+
+        <!-- Email -->
+        <label for="email">
+            Your Email:
+            <input type="email" id="email" name="email" required>
+        </label>
+
+        <!-- Message -->
+        <label for="message">
+            Your Message:
+            <textarea id="message" name="message" required></textarea>
+        </label>
+
+        <button type="submit">Send Message</button>
     </form>
-  </section>
+</section>
 
   <!-- Footer -->
   <footer>

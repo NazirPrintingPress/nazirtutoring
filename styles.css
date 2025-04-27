@@ -125,7 +125,8 @@ form {
 
 form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;  /* Increased margin for spacing */
+    font-weight: bold;    /* Added bold text for labels */
 }
 
 form input,
@@ -135,14 +136,14 @@ form textarea {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;  /* Make font size a bit bigger */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Readable font */
+    font-size: 1rem;  /* Increased font size for readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Ensured readability */
     background-color: #f9f9f9;  /* Light background for easy readability */
     transition: background-color 0.3s ease;
 }
 
 form textarea {
-    min-height: 150px;  /* Gives a taller box by default */
+    min-height: 150px;  /* Ensured taller text box for messages */
 }
 
 /* Focus style for better readability */
@@ -153,11 +154,12 @@ form textarea:focus {
     background-color: #f1f1f1;  /* Slightly darker background on focus */
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);  /* Green glow on focus */
 }
+
 form button {
     margin-top: 15px;
     background: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 12px 20px;  /* Added padding for a larger button */
     border: none;
     width: 100%;
     font-size: 1rem;
@@ -173,7 +175,7 @@ form button:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;  /* Increased padding for footer */
     background: #4CAF50;
     color: white;
     margin-top: 40px;
